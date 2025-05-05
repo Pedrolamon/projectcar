@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block title %}Página Inicial{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+
+<!-- WRAPPER para alinhar lado a lado -->
+<div class="form-wrapper">
+    
+    <!-- FORMULÁRIO DE LOGIN -->
+    <main class="container--login">
+        <h2>Login</h2>
+        <form action="{{ url_for('login') }}" method="POST">
+            <div class="input-box--login">
+                <label for="username">Nome:</label>
+                <input type="text" id="username" name="username" placeholder="Digite seu nome" required>
+            </div>
+            
+            <div class="input-box--login">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+            </div>
+
+            <button type="submit" class="login--login">Entrar</button>
+
+            <div class="remember-forgot--login">
+                <label>
+                    <input type="checkbox"> Lembrar senha
+                </label>
+                <a href="{{ url_for('login') }}">Esqueci senha</a>
+            </div>
+        </form>
+    </main>
+
+    <!-- FORMULÁRIO DE REGISTRO -->
+    <div class="container">
+        <h2>Registro</h2>
+        <form action="{{ url_for('login') }}" method="POST" onsubmit="return checkTermsAgreement()">
+
+            <div class="input-box">
+                <label for="name">Nome:</label>
+                <input type="text" id="username" name="username" placeholder="Digite seu nome completo" required>
+            </div>
+
+            <div class="input-box">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+            </div>
+
+            <div class="input-box">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+            </div>
+
+            <div class="input-box">
+                <button type="button" class="btn btn-info" onclick="openTermsModal()">Leia os Termos</button>
+                <label>
+                    <input type="checkbox" id="agree_terms" required> Concordo com os Termos
+                </label>
+            </div>
+
+            <button type="submit" class="login--login">Registrar</button>
+        </form>
+    </div>
+
+</div>
+
+<!-- Modal -->
+<div id="termsModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close" onclick="closeTermsModal()">&times;</span>
+        <h2>Termos de Uso</h2>
+        <p>Adicione o conteúdo dos termos aqui.</p>
+    </div>
+</div>
+
+<script>
+    function openTermsModal() {
+        document.getElementById("termsModal").style.display = "block";
+    }
+
+    function closeTermsModal() {
+        document.getElementById("termsModal").style.display = "none";
+    }
+
+    function checkTermsAgreement() {
+        const checkbox = document.getElementById("agree_terms");
+        if (!checkbox.checked) {
+            alert("Você deve concordar com os termos antes de se registrar.");
+            return false;
+        }
+        return true;
+    }
+</script>
+{% endblock %}

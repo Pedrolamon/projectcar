@@ -1,0 +1,170 @@
+{% extends "base.html" %}
+
+{% block title %}Projeto{% endblock %}
+
+{% block content %}
+    <title>Projectcar</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    </style>
+<body>
+
+<section class="page1">
+    <video src="{{ url_for('static', filename='img/New Project ‐ Feito com o Clipchamp.mp4') }}" autoplay muted loop></video>
+
+    </section>
+    <section class="page2">
+        <h1>Nos te ajudamos a criar <br>o seu sonho</h1>
+        <p>Nosso site é focado para você que tem o sonho de construir um carro de performasse ou apenas da um upzinho no carro para brincar com os amigos. Nos te ajudamos o melhor projeto possível com aquilo que você tem disponível. Nós fornecemos informações necessarias para montar o seu projeto e os melhores preços.  </p>
+        <video class="lambo2" src="..//static/img/lambo2.mp4.mp4" autoplay muted loop></video>
+    <h4 class="title1"><a href="{{url_for('projeto')}}">Monte seu projeto</a></h4>
+    </section>
+    <script src="mobile-navbar.js"></script>
+
+<section class="page3">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Contêiner de produtos (Carrossel) -->
+    <main class="product-section">
+        <h3>Mais vendidos</h3>
+        <div class="product-container">
+            <div class="product-card">
+                <img src="https://via.placeholder.com/150" alt="Car Oil">
+                <h2>Premium Engine Oil</h2>
+                <span class="price">$29.99</span>
+                <button class="buy-now">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/150" alt="Car Battery">
+                <h2>Car Battery 12V</h2>
+                <span class="price">$89.99</span>
+                <button class="buy-now">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/150" alt="Tire">
+                <h2>All-Season Tire</h2>
+                <span class="price">$119.99</span>
+                <button class="buy-now">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/150" alt="Car Wax">
+                <h2>Car Wax</h2>
+                <span class="price">$15.99</span>
+                <button class="buy-now">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/150" alt="Brake Pads">
+                <h2>Brake Pads Set</h2>
+                <span class="price">$49.99</span>
+                <button class="buy-now">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/150" alt="LED Headlights">
+                <h2>LED Headlights</h2>
+                <span class="price">$39.99</span>
+                <button class="buy-now">Buy Now</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        function scrollProducts(direction) {
+            const container = document.querySelector('.product-container');
+            const scrollAmount = 300; // Ajuste a distância do scroll
+            if (direction === 'left') {
+                container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            } else {
+                container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+
+</section>
+
+<section class="category-section">
+
+    <div class="category-buttons">
+        <h2 class="titulo">Navegue por Categorias</h2>
+        <button class="category-btn" onclick="filterProducts('all')">Todos</button>
+        <button class="category-btn" onclick="filterProducts('performance')">Performance</button>
+        <button class="category-btn" onclick="filterProducts('visual')">Estética</button>
+        <button class="category-btn" onclick="filterProducts('fluid')">Óleos e Fluidos</button>
+        <button class="category-btn" onclick="filterProducts('tools')">Ferramentas</button>
+        <button class="category-btn" onclick="filterProducts('performance')">suspensão</button>
+        <button class="category-btn" onclick="filterProducts('performance')">Performance</button>
+        <button class="category-btn" onclick="filterProducts('electronics')">Eletrônicos</button>
+        <button class="category-btn" onclick="filterProducts('performance')">Equipamentos</button>
+        <button class="category-btn" onclick="filterProducts('performance')">Tunnning</button>
+        <button class="category-btn" onclick="filterProducts('performance')">Limpeza profunda</button>
+        <button class="category-btn" onclick="filterProducts('performance')">Freios</button>
+        
+    </div>
+</section>
+
+<section class="page4">
+    <main class="product-section">
+        <h3>Descontos da Semana</h3>
+        <div class="product-container">
+            <div class="product-card">
+                <img src="https://via.placeholder.com/150" alt="Car Oil">
+                <h2>Premium Engine Oil</h2>
+                <span class="price">$29.99</span>
+                <button class="buy-now">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/150" alt="Car Battery">
+                <h2>Car Battery 12V</h2>
+                <span class="price">$89.99</span>
+                <button class="buy-now">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/150" alt="Tire">
+                <h2>All-Season Tire</h2>
+                <span class="price">$119.99</span>
+                <button class="buy-now">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/150" alt="Car Wax">
+                <h2>Car Wax</h2>
+                <span class="price">$15.99</span>
+                <button class="buy-now">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/150" alt="Brake Pads">
+                <h2>Brake Pads Set</h2>
+                <span class="price">$49.99</span>
+                <button class="buy-now">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/150" alt="LED Headlights">
+                <h2>LED Headlights</h2>
+                <span class="price">$39.99</span>
+                <button class="buy-now">Buy Now</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        function scrollProducts(direction) {
+            const container = document.querySelector('.product-container');
+            const scrollAmount = 300; // Ajuste a distância do scroll
+            if (direction === 'left') {
+                container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            } else {
+                container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+
+</section>
+
+<section class="page5">
+        <h5>rodape</h5>
+        
+        
+</section>
+{% endblock %}

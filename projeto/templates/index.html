@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}Página Inicial{% endblock %}
+
+{% block content %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static.css/index.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    
+    <title>Consulta FIPE</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Consulta Tabela FIPE</h1>
+    <form method="POST">
+        <label for="marca">Marca:</label>
+        <select name="marca" id="marca" required>
+            <option value="">Selecione uma marca</option>
+            {% for marca in marcas %}
+                <option value="{{ marca.codigo }}">{{ marca.nome }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="modelo">Modelo:</label>
+        <select name="modelo" id="modelo" required>
+            <option value="">Selecione um modelo</option>
+        </select>
+
+        <label for="ano">Ano:</label>
+        <select name="ano" id="ano" required>
+            <option value="">Selecione um ano</option>
+        </select>
+
+        <button type="submit">Consultar</button>
+    </form>
+
+    {% if dados_fipe %}
+        <h2>Resultado:</h2>
+        <p>Preço: {{ dados_fipe.preco }}</p>
+        <p>Marca: {{ dados_fipe.marca }}</p>
+        <p>Modelo: {{ dados_fipe.modelo }}</p>
+        <p>Ano: {{ dados_fipe.ano }}</p>
+    {% endif %}
+
+    <script>
+        // Atualiza os modelos com base na marca selecionada
+        $("#marca").change(function () {
+            const marcaId = $(this).val();
+            $("#modelo").html('<option value="">Carregando...</option>');
+            $.get(`/modelos/${marcaId}`, function (data) {
+                let options = '<option value="">Selecione um modelo</option>';
+                data.forEach(modelo => {
+                    options += `<option value="${modelo.codigo}">${modelo.nome}</option>`;
+                });
+                $("#modelo").html(options);
+            });
+        });
+
+        // Atualiza os anos com base no modelo selecionado
+        $("#modelo").change(function () {
+            const marcaId = $("#marca").val();
+            const modeloId = $(this).val();
+            $("#ano").html('<option value="">Carregando...</option>');
+            $.get(`/anos/${marcaId}/${modeloId}`, function (data) {
+                let options = '<option value="">Selecione um ano</option>';
+                data.forEach(ano => {
+                    options += `<option value="${ano.codigo}">${ano.nome}</option>`;
+                });
+                $("#ano").html(options);
+            });
+        });
+    </script>
+{% endblock %}

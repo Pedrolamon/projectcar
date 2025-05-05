@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <!-- Título dinâmico -->
+    <title>{% block title %}Base{% endblock %}</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+    {% if not hide_header %}
+    <header id="header">
+        <nav>
+            <a class="logo" href="/">Projectcar</a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li>
+                    <a href="{{ url_for('principal')}}">Home</a>
+                </li>
+                <li class="dropdown">
+                    <a href="{{ url_for('projeto') }}">Projetos</a>
+                    <li><a href="{{url_for('index')}}">Tabela FIPE</a></li>
+                </li>
+                <li class="dropdown">
+                    <a href="{{url_for('produtos')}}">Produtos</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./ferramentas.html">Ferramentas</a></li>
+                        <li><a href="./limpeza.html">Equipamento</a></li>
+                        <li><a href="./limpeza.html">Performance</a></li>
+                        <li><a href="./estetica.html">Tunnning</a></li>
+                        <li><a href="./rodas.html">Sistema de Suspensão</a></li>
+                        <li><a href="./interior.html">Transmissão</a></li>
+                        <li><a href="./oleos.html">Óleos e fluidos</a></li>
+                        <li><a href="./eletronicos.html">Lataria e Para-choques</a></li>
+                        <li><a href="./eletronicos.html">Freios</a></li>
+                        <li><a href="./eletronicos.html">Limpeza Profunda</a></li>
+                    </ul>
+                </li>
+                <li id="pesquisa">
+                    <a href="{{url_for('login')}}">Login</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    {% endif %}
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const query = params.get("q");
+        const resultadosEl = document.getElementById("resultados");
+
+        if (resultadosEl) {
+            if (query) {
+                resultadosEl.innerHTML = `Você pesquisou por: <strong>${query}</strong>`;
+            } else {
+                resultadosEl.innerHTML = "Nenhum termo foi pesquisado.";
+            }
+        }
+    </script>
+</body>
+
+</html>

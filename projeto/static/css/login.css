@@ -1,0 +1,197 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #121212;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Containers principais */
+.container--login,
+.container {
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 100%;
+  margin: 20px 0;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #00bcd4;
+}
+
+/* Campos de entrada */
+.input-box--login,
+.input-box {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-box--login label,
+.input-box label {
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #ccc;
+}
+
+.input-box--login input,
+.input-box input {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+.input-box--login input:focus,
+.input-box input:focus {
+  outline: 2px solid #00bcd4;
+}
+
+/* Botões */
+.login--login,
+.btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login--login:hover,
+.btn:hover {
+  background-color: #0097a7;
+}
+
+/* Lembrar/esqueci senha */
+.remember-forgot--login {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.remember-forgot--login a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+.remember-forgot--login a:hover {
+  text-decoration: underline;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #2a2a2a;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  color: white;
+  position: relative;
+}
+
+.modal-content h2 {
+  color: #00bcd4;
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.close:hover {
+  color: #f44336;
+}
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.container--login, .container {
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    width: 350px;
+    color: #fff;
+}
+
+.input-box--login, .input-box {
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    margin-top: 5px;
+}
+
+button.login--login {
+    width: 100%;
+    padding: 10px;
+    background-color: #00cfe8;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button.login--login:hover {
+    background-color: #00b2c7;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .container--login,
+  .container {
+    padding: 20px;
+  }
+
+  .login--login,
+  .btn {
+    font-size: 14px;
+  }
+}
