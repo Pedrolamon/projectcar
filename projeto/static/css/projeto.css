@@ -4,13 +4,6 @@
 }
 
 
-/* Reset básico */
-body, h1, h2, p, ul, li, input, button {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
 
 /* Estilo geral da página */
 body {
@@ -22,117 +15,78 @@ body {
 
 /* Título principal */
 h1 {
-    text-align: center;
-    color: #ffffff;
-
-    margin-left: 600px;
-}
-
-
-h2 {
-    text-align: center;
-    margin-top: 30px;
-    color: #ffffff;
-}
-
-.imgoficial{
-    height: 400px;
-    width: 600px;
-    object-fit: cover;
-    position: absolute;
-    top: 130px;
-    left: 60px;
-    
-}
-
-.page1{
-    height: 95vh;
-    background-color: #040404;
     display: flex;
+    text-align: center;
+    color: #ffffff;
+    margin-left: 30px;
+    margin-top: 280px;
+}
+
+#tabela{
+    display: flex;
+    border-radius: 8px;
+    flex-direction: row;
+    align-content: flex-start;
+    gap: 2px;
+    max-width: 1000px;
+    margin: 20px;
+    margin-top: 220px;
+    margin-left: 20%;
+    color: white;
+}
+.car-info{
+    display: flex;
+    flex-direction: row;
+    margin-top: 230px;
+    align-items: flex-start;
+    margin-bottom: 80px;
+}
+.infotec{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    margin-left: 205px;
+}
+
+.stageinfo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    margin-left: 740px;
 }
 
 .infotecnicas{
-    align-items: center;
+    display: flex;
     font-size: 20px;
     color: #ffffff;
-    margin-left: 600px;
-    margin-top: 0px;
-    justify-content: start;
-    
+    margin-bottom: 18px;
 }
-.infotecnicas1{
-align-items: center;
-font-size: 20px;
-color: #ffffff;
-margin-left: 600px;
-margin-top: 15px;
-}
-.infotecnicas2
-{
-    align-items: center;
-    font-size: 20px;
-    color: #ffffff;
-    margin-left: 600px;
-    margin-top: 40px;
-    
-}
-.infotecnicas3
-{
-    align-items: center;
-    font-size: 20px;
-    color: #ffffff;
-    margin-left: 600px;
-    justify-content: start;
-    margin-top: 70px;
-}
-h1{
-    position:absolute
-}
-h4{
-    position:absolute;
-    left: 50%;
-    
-}
-.stage1{
-    align-items: center;
-    font-size: 20px;
-    text-align: end;
-    max-width: 400px;
-    color: #ffffff;
-    margin-left: 200px;
-    margin-top: 210px;
 
-}
-.stage2{
-    align-items: center;
-    font-size: 20px;
-    text-align: end;
-    max-width: 400px;
+.t2 {
     color: #ffffff;
-    margin-left: 500px;
-    margin-top: 170px;
+    margin-left: 830px;
+    margin-top: 280px;
 }
-.stage3{
-    align-items: center;
+
+
+
+.stage {
     font-size: 20px;
-    text-align: end;
-    max-width: 400px;
     color: #ffffff;
-    margin-left: 500px;
-    margin-top: 15px;
-    margin-top: 180px;
 }
-.page2{
-    height: 100vh;
-    background-color: #000000;
+
+.t3{
+    display: block; /* ou flex em coluna se quiser */
+    width: 100%;
+    text-align: center; /* opcional: centraliza o texto */
+    margin-bottom: 20px; /* espaço abaixo do título */
 }
 h3{
-    text-align: center;
     font-size: 30px;
     color: rgb(255, 255, 255);
     padding-top: 25px;
 }
-
 
 /* Seção de produtos (Carrossel) */
 .product-section {
@@ -184,7 +138,7 @@ h3{
 
 .product-card .buy-now {
     background-color: #00b2c7;
-    color: #000;
+    color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;

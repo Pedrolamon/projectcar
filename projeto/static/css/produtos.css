@@ -5,291 +5,20 @@
 
 }
 
-a {
-    color: white;
-    text-decoration: none;
-    transition: 0.3s; /* Corrigido a vírgula para ponto */
-}
-
-a:hover {
-    opacity: 0.7; /* Corrigido o erro da vírgula */
-}
-
-.logo {
-    font-size: 35px;
-    text-transform: uppercase;
-    letter-spacing: 6px;
-    margin: 55px;
-}
-
-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    height: 15vh;
-    padding: 10px;
-    position: fixed;
-    top:0;
-    left: 0;
-    z-index: 1000;
-}
-
-.nav-list {
-    list-style: none;
-    display: flex;
-    color: aliceblue;
-    align-items: center;
-    font-size:20px;
-}
-
-.nav-list li {
-    letter-spacing: 3px;
-    margin-left: 110px;
-
-}
-
-.mobile-menu div {
-    display: none;
-    width: 32px;
-    height: 2px;
-    background: #ffff;
-    margin: 8px;
-    transition: 0.3s;
-}
-
-@media (max-width: 1100px) {
-    body {
-        overflow: hidden;
-    }
-
-    .nav-list {
-        position: absolute;
-        top: 15vh;
-        right: 50;
-        width: 50vw;
-        height: 92vh;
-        background: #23232e;
-        flex-direction: column;
-        align-items: left;
-        justify-content: space-around;
-        transform: translateX(100%); /* Menu começa fora da tela */
-        transition: transform 0.3s ease-in; /* Corrigido o erro na vírgula */
-    }
-
-    .nav-list.active {
-        transform: translateX(0); /* Menu vai para a posição normal quando ativo */
-    }
-
-    .mobile-menu {
-        display: block;
-    }
-
-    .nav-list li {
-        margin-left: 0; /* Ajuste do margin para quando a lista estiver no menu mobile */
-        position: relative; /* Adiciona isso para ajustar a posição do dropdown */
-    }
-
-    .mobile-menu div {
-        display: block;
-        cursor: pointer; /* Torna o botão de menu interativo */
-    }
-}
-
-@keyframes navlinkfade {
-    from{
-opacity: 0;
-transform: translate(50px);
-    }
-    to{
-opacity: 1;
-transform: translate(0);
-    }
-}
-
-.mobile-menu.active .line1{
-transform: rotate(-45deg) translate(-8px, 8px);
-}
-.mobile-menu.active .line2{
- opacity: 0;
-}
-.mobile-menu.active .line3{
-    transform: rotate(45deg) translate(-5px, -7px);
-}
 h1{
-    font-size: 30px;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 6px;
-    position: absolute;
-    top: 180px;
-    left: 180px;
-
-}
-p{
-    width: 620px; 
-   font-weight: 200;
-   position: absolute;
-   font-display: block;
-   font-size: 22px;
-   left: 180px;
-   top: 270px;
-}
- 
-.dropdown .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 75px;
-    left: 48%;
-    backdrop-filter: blur(40px); /* Aplica o blur ao fundo */
-    background-color: transparent;
-    list-style: none;
-    padding: 10px 0;
-    margin: 0;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    z-index: 1000;
-}
-
-.dropdown .dropdown-menu li {
-    margin: 0;
-}
-
-.dropdown .dropdown-menu a {
-    color: white;
-    padding: 10px 20px;
-    display: block;
-    white-space: nowrap;
-}
-
-.dropdown .dropdown-menu a:hover {
-    background-color: #555;
-}
-
-/* Mostrar menu suspenso ao passar o mouse */
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-section{
-    height: 100vh;
-    scroll-snap-align: start;
     display: flex;
-    justify-content: center;
-    position: relative;
-
-}
-video{
-    height: 100vh;
-    width: 100%;
-    object-fit: cover;/* Garante que o vídeo preencha sem distorcer */
-
-}
-.page2{
-    height: 90vh;
-}
-h4{
-    font-size: 30px;
-    font-weight: 200;
-    position: absolute;
-    top: 70%;
-    left: 20%;
-}
-.lambo2{
-    height: 90%;
-    width: 35%;
-    position: absolute;
-    top: 50px;
-    right: 100px;
-    object-fit: cover;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-.container {
-    max-width: 600px;
-    margin: auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    text-align: center;
-    color: #333;
-}
-
-label {
-    font-weight: bold;
-    margin-top: 10px;
-    display: block;
-}
-
-select, button {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-}
-
-#resultado {
-    margin-top: 20px;
-    text-align: center;
-}
-
-#car-image {
-    max-width: 100%;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-#info {
-    background: #f9f9f9;
-    padding: 10px;
-    border-radius: 8px;
-    text-align: left;
+    margin-left: 540px;
 }
 
 a{
-    margin-left: 20px;
+    margin: 20px;
 }
 
-/* Geral */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #1c1c1c;
-    color: #fff;
-}
-.page3{
-    height: 35vh;
-}
-/* Cabeçalho */
-h3 {
-align-items: center;
-    color:#f9a825;
-    text-align: center;
-    font-size: 23px;
-}
-
-.header h2 {
-    font-size: 24px;
-    color: #f9a825;
-    margin: 0;
-}
-
-/* Seção de produtos (Carrossel) */
 .product-section {
-    position: relative;
+    display: block;
     margin: 0px;
     overflow: hidden; /* Esconde os produtos que não cabem na tela */
-    margin-top: 80px;
+    margin-top: 220px;
 }
 
 .product-container {
@@ -323,7 +52,7 @@ align-items: center;
 
 .product-card h2 {
     font-size: 18px;
-    color: #f9a825;
+    color: #ffffff;
     margin: 10px 0;
 }
 
@@ -334,8 +63,8 @@ align-items: center;
 }
 
 .product-card .buy-now {
-    background-color: #f9a825;
-    color: #000;
+    background-color: #007bff;
+    color:white;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -346,7 +75,7 @@ align-items: center;
 }
 
 .product-card .buy-now:hover {
-    background-color: #c68600;
+    background-color: #007bff;
 }
 
 /* Botões do Carrossel */
@@ -354,7 +83,6 @@ align-items: center;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #444;
     color: #fff;
     border: none;
     padding: 10px;
@@ -373,8 +101,8 @@ align-items: center;
 }
 
 .carousel-nav:hover {
-    background-color: #f9a825;
-    color: #000;
+    background-color: #007bff;
+    color: #ffffff;
 }
 
 /* Seção de Categorias */
@@ -386,7 +114,7 @@ align-items: center;
 
 .category-section .titulo {
     font-size: 22px;
-    color: #f9a825;
+    color: white;
     margin-bottom: 15px;
     position: absolute;
     top:0px;
@@ -413,6 +141,6 @@ align-items: center;
 }
 
 .category-btn:hover {
-    background-color: #f9a825;
+    background-color: #007bff;
     color: #000;
 }

@@ -15,6 +15,11 @@ a:hover {
     opacity: 0.7; /* Corrigido o erro da vírgula */
 }
 
+#shopping-cart{
+    width: 60px;
+    
+}
+
 .logo {
     font-size: 35px;
     text-transform: uppercase;
@@ -139,8 +144,8 @@ p{
 .dropdown .dropdown-menu {
     display: none;
     position: absolute;
-    top: 75px;
-    left: 60%;
+    top: 80px;
+    left: 70%;
     backdrop-filter: blur(40px); /* Aplica o blur ao fundo */
     background-color: transparent;
     list-style: none;

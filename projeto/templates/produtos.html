@@ -3,13 +3,12 @@
 {% block title %}Página Inicial{% endblock %}
 
 {% block content %}
-    <title>Produtos</title>
-    <link rel="stylesheet" href="../static.css/produtos.css">
-</head>
-<body>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/produtos.css') }}">
+
+<h1>Produtos</h1>
     <!-- PRODUTOS -->
-    <main class="product-section">
-        <h3>Produtos de limpeza</h3>
+     <main>
+    <div class="product-section">
         <a href="{{ url_for('login') }}">veja mais</a>
 
         <div class="product-container">
@@ -50,8 +49,7 @@
                 <button class="buy-now">Buy Now</button>
             </div>
         </div>
-    </main>
-
+</main>
     <script>
         function scrollProducts(direction) {
             const container = document.querySelector('.product-container');
@@ -62,4 +60,5 @@
             });
         }
     </script>
+    {% include 'footer.html' %}
 {% endblock %}

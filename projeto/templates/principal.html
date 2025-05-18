@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Projeto{% endblock %}
+{% block title %}Página Inicial{% endblock %}
 
 {% block content %}
     <title>Projectcar</title>
@@ -14,10 +14,10 @@
 
 <section class="page1">
     <video src="{{ url_for('static', filename='img/New Project ‐ Feito com o Clipchamp.mp4') }}" autoplay muted loop></video>
-
     </section>
+  
     <section class="page2">
-        <h1>Nos te ajudamos a criar <br>o seu sonho</h1>
+        <h1>Nós te ajudamos a criar <br>o seu sonho</h1>
         <p>Nosso site é focado para você que tem o sonho de construir um carro de performasse ou apenas da um upzinho no carro para brincar com os amigos. Nos te ajudamos o melhor projeto possível com aquilo que você tem disponível. Nós fornecemos informações necessarias para montar o seu projeto e os melhores preços.  </p>
         <video class="lambo2" src="..//static/img/lambo2.mp4.mp4" autoplay muted loop></video>
     <h4 class="title1"><a href="{{url_for('projeto')}}">Monte seu projeto</a></h4>
@@ -26,7 +26,6 @@
 
 <section class="page3">
     <link rel="stylesheet" href="styles.css">
-</head>
 <body>
     <!-- Contêiner de produtos (Carrossel) -->
     <main class="product-section">
@@ -94,18 +93,16 @@
         <button class="category-btn" onclick="filterProducts('visual')">Estética</button>
         <button class="category-btn" onclick="filterProducts('fluid')">Óleos e Fluidos</button>
         <button class="category-btn" onclick="filterProducts('tools')">Ferramentas</button>
-        <button class="category-btn" onclick="filterProducts('performance')">suspensão</button>
+        <button class="category-btn" onclick="filterProducts('suspensão')">suspensão</button>
         <button class="category-btn" onclick="filterProducts('performance')">Performance</button>
-        <button class="category-btn" onclick="filterProducts('electronics')">Eletrônicos</button>
-        <button class="category-btn" onclick="filterProducts('performance')">Equipamentos</button>
-        <button class="category-btn" onclick="filterProducts('performance')">Tunnning</button>
-        <button class="category-btn" onclick="filterProducts('performance')">Limpeza profunda</button>
-        <button class="category-btn" onclick="filterProducts('performance')">Freios</button>
-        
+        <button class="category-btn" onclick="filterProducts('Electronics')">Eletrônicos</button>
+        <button class="category-btn" onclick="filterProducts('Equipamentos')">Equipamentos</button>
+        <button class="category-btn" onclick="filterProducts('Tunnning')">Tunnning</button>
+        <button class="category-btn" onclick="filterProducts('Limpeza')">Limpeza profunda</button>
+        <button class="category-btn" onclick="filterProducts('Freios')">Freios</button>
     </div>
 </section>
 
-<section class="page4">
     <main class="product-section">
         <h3>Descontos da Semana</h3>
         <div class="product-container">
@@ -158,13 +155,10 @@
             }
         }
     </script>
+
 </body>
+{% include 'footer.html' %}
 
-</section>
 
-<section class="page5">
-        <h5>rodape</h5>
-        
-        
-</section>
+
 {% endblock %}

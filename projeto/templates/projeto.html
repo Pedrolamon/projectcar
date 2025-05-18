@@ -5,24 +5,52 @@
 {% block content %}
 
 <link rel="stylesheet" href="../static/css/projeto.css">
-<Section class="page1">
-<H1>informações tecnicas</H1>
-<p class="infotecnicas ">Motor:</p>
-<p class="infotecnicas1 ">Cavalos:</p>
-<p class="infotecnicas2">Torque:</p>
-<p class="infotecnicas3 ">Ano:</p>
 
-<H4>Tipos de stage</H4>
-<P class="stage1">stage1</P>
-<P class="stage2">stage2</P>
-<P class="stage3">stage3</P>
-</Section>
-<img class="imgoficial" src="../static/img/gol.jpeg">
-<Section class="page2">
-<h3>Peças disponiveis para este Projeto</H3>
+<div id="tabela">
+	<label for="marca">Marca:</label>
+        <select name="marca" id="marca" required>
+            <option value="">Selecione uma marca</option>
+        </select>
+	<label for="modelo">Modelo:</label>
+        <select name="modelo" id="modelo" required>
+            <option value="">Selecione um modelo</option>
+        </select>
+	<label for="ano">versão:</label>
+        <select name="versão" id="versão" required>
+            <option value="">Selecione a versão</option>
+        </select>
+</div>
+
+    <H1>informações tecnicas</H1>
+    <div class="car-info">
+<div class="infotec">
+    <div class="infotecnicas ">Motor:</div>
+    <div class="infotecnicas ">Cavalos:</div>
+    <div class="infotecnicas">Torque:</div>
+    <div class="infotecnicas ">Ano:</div>
+</div>
+
+
+    <div class="stageinfo">
+       <H1 class="t2">Tipos de preparação</H1>
+        <div class="stage">stage1</div>
+        <div class="stage">stage2</div>
+        <div class="stage">stage3</div>
+        <div class="stage">Aspirado</div>
+    </div> 
+</div>
+
+
+
+    <h3>Peças disponiveis para este Projeto</H3>
+</div>
+    
 
     <main class="product-section">
+
+ 
         <div class="product-container">
+             <h1>stage1</h1>
             <div class="product-card">
                 <img src="https://via.placeholder.com/150" alt="Car Oil">
                 <h2>Premium Engine Oil</h2>
@@ -61,5 +89,6 @@
             </div>
         </div>
 
-</Section>
+
+{% include 'footer.html' %}
 {% endblock %}
